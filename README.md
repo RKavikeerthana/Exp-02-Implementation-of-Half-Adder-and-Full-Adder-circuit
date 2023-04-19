@@ -36,19 +36,46 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
+```py
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:R.Kavi Keerthana 
+RegisterNumber: 212222100022
+
+module ha(x,y,s,c);
+input x,y;
+output s,c;
+xor(s,x,y);
+and(c,x,y);
+endmodule
+
+module full_adder(x, y, z, s, c, x1, x2, x3);
+input x,  y,z;
+output s ,c, x1, x2, x3;
+xor(x1, x, y);
+xor(s, x1, z);
+and(x2, x, y);
+and(x3, x1, z);
+or(c, x2, x3);
+endmodule
+```
 Logic symbol & Truthtable
 RTL realization
 
 ### Output:
 ### RTL
+![de exp 3 ](https://user-images.githubusercontent.com/120431120/232961486-de928096-3a73-45f9-93da-492f1995b643.png)
+![de exp 3](https://user-images.githubusercontent.com/120431120/232961616-1c8e715c-26c7-4542-95f9-e4f920e2a34d.png)
+
 ### TIMING DIAGRAM
+![de exp3 td (1)](https://user-images.githubusercontent.com/120431120/232961830-aa0b310b-ce23-4631-9760-d105cc7324d4.png)
+
+![de exp3 wf (1)](https://user-images.githubusercontent.com/120431120/232961724-472ccb9e-6501-47c4-9115-a658a858eb1f.png)
+
 
 
 ### TRUTH TABLE 
+![de exp3 tt1 (2)](https://user-images.githubusercontent.com/120431120/232961936-4116e703-099e-4bae-abde-5e8bd990ad98.png)
+
 
 ### Result:
+Therefore,half adder and full adder is verified
